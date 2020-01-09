@@ -3,4 +3,5 @@ project(laba_OOP_03_P)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(laba_OOP_03_P main.cpp cmake-build-debug/Figure.h Figures.cpp Figures.h Vertex.cpp Vertex.h Fig.h)
+add_executable(laba_OOP_03_P main.cpp  Figures.cpp Vertex.cpp)
+
