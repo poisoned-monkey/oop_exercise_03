@@ -27,10 +27,9 @@ int main() {
 
     setlocale(LC_ALL, "rus");
     int Menu_1,Menu_2, Index;
-    double SummaryArea = 0;
     Figure* f;
     std::vector<Figure*> Figures;
-
+    double SummaryArea = 0;
     while (true) {
         switch (Menu_1 = option()) {
             case 1:
@@ -74,6 +73,9 @@ int main() {
                         std::cout << "Area: " << (*Figures[i]).square() << std::endl;
                         std::cout << "Center: " << (*Figures[i]).center() << std::endl;
                     }
+                for (int i = 0; i < Figures.size(); i++) {
+                    SummaryArea += Figures[i]->square();
+                }
                 std::cout << "Общая площадь фигур: " << SummaryArea << std::endl;
                 break;
             case 6:
