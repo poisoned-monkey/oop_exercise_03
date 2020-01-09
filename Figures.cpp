@@ -78,12 +78,21 @@ Vertex Pentagon::center() const {
     return res / 5;
 }
 double Pentagon::square() const  {
-    double Area = 0;
+    /*double Area = 0;
     for (int i = 0; i < 5; i++) {
         Area += (Vertexes[i].x) * (Vertexes[(i + 1)%5].y) - (Vertexes[(i + 1)%5].x)*(Vertexes[i].y);
     }
     Area *= 0.5;
-    return abs(Area);
+    return abs(Area); */
+
+    double Area = 0;
+    Area =(Vertexes[0].x*Vertexes[1].y+Vertexes[1].x*Vertexes[2].y+Vertexes[2].x*Vertexes[3].y+Vertexes[3].x*Vertexes[4].y+Vertexes[4].x*Vertexes[0].y-Vertexes[1].x*Vertexes[0].y-
+       Vertexes[2].x*Vertexes[1].y-Vertexes[3].x*Vertexes[2].y-Vertexes[4].x*Vertexes[3].y-Vertexes[0].x*Vertexes[4].y)/2;
+    if(Area < 0){
+        return -Area;
+    }else {
+        return Area;
+    }
 }
 
 void Pentagon::print() const {
